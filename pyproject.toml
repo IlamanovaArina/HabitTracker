@@ -23,6 +23,7 @@ djangorestframework-simplejwt = "^5.5.0"
 celery = "^5.5.0"
 eventlet = "^0.39.1"
 redis = "^5.2.1"
+django-cors-headers = "^4.7.0"
 
 [build-system]
 requires = ["poetry-core"]

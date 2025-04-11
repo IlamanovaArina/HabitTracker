@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'rest_framework',
     # # 'django.contrib.staticfiles',  # требуется для обслуживания файлов css/js интерфейса swagger
     # 'drf_yasg',
-    # 'corsheaders',
+    'corsheaders',
     # 'django_celery_beat',
 
     'users',
@@ -40,7 +40,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'corsheaders.middleware.CorsMiddleware'
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -114,6 +114,7 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
+# Настройка для corsheaders
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
     "http://localhost:8000",
