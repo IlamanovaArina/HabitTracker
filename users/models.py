@@ -5,9 +5,9 @@ from django.db import models
 class User(AbstractUser):
     """ Модель пользователя """
     username = None
-    email = models.EmailField(unique=True, verbose_name='Email', )
-    avatar = models.ImageField(upload_to='users/', blank=True, null=True, verbose_name='Аватар', )
-    phone = models.CharField(max_length=11, blank=True, null=True, verbose_name='Номер телефона', )
+    name = models.CharField(max_length=50, verbose_name='Имя', blank=True, null=True)
+    email = models.EmailField(unique=True, verbose_name='Email')
+    phone = models.CharField(max_length=11, blank=True, null=True, verbose_name='Номер телефона')
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []

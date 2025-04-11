@@ -1,16 +1,22 @@
 from datetime import time
 from django.db import models
-from config import settings
+from users.models import User
 
 
 class Award(models.Model):
     """ Модель вознаграждения """
-    name = models.CharField()
+
+    name = models.CharField(max_length=100, help_text='Название')
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, default=1,
+                              verbose_name='Владелец')
+    description = models.TextField(max_length=200, blank=True, null=True, help_text='Описание')
+    price = models.IntegerField(default=0, verbose_name='Цена')
 
 
 class Habits(models.Model):
     """ Модель привычки. Приятной иои полезной. """
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=1,
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1,
                              related_name='owner_lesson', verbose_name='Пользователь')
     place = models.CharField(max_length=100, help_text='Место в котором необходимо выполнять действие.')
     tame = models.TimeField(help_text='Время, когда не обходимо выполнять действие.')
@@ -22,4 +28,4 @@ class Habits(models.Model):
     periodicity = models.IntegerField(help_text='Периодичность(в днях)', default=2)
     award = models.ForeignKey(Award, on_delete=models.SET_NULL, blank=True, null=True, help_text='Вознаграждение')
     time_to_complete = models.DurationField(default=time(minute=1, hour=0), help_text='Время на выполнение')
-    sign_of_publicity = models.BooleanField(default=False, help_text='Признак публичности')
+    is_public = models.BooleanField(default=False, help_text='Признак публичности')

@@ -21,8 +21,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # 'rest_framework_simplejwt',
-    # 'rest_framework',
+    'rest_framework_simplejwt',
+    'rest_framework',
     # # 'django.contrib.staticfiles',  # требуется для обслуживания файлов css/js интерфейса swagger
     # 'drf_yasg',
     # 'corsheaders',
