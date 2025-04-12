@@ -5,6 +5,7 @@ from habits.models import Habits, Award
 from habits.paginators import HabitsPagination
 from habits.permissions import IsOwner
 from habits.serializers import HabitsSerializer, AwardSerializer
+from habits.tasks import reminder_of_habit
 
 
 class HabitsViewSet(viewsets.ModelViewSet):
@@ -31,7 +32,10 @@ class HabitsViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         """ Метод вносит изменение в сериализатор создания "Привычки" """
 
-        serializer.save(user=self.request.user)
+        habit = serializer.save(user=self.request.user)
+        tg_chat_id = self.request.user.tg_chat_id
+        # Запускаем периодическую задачу
+        reminder_of_habit(habit.id, tg_chat_id, habit.name, habit.periodicity)
 
     def get_queryset(self):
         """ Метод для изменения запроса к базе данных по объектам модели "Курса". """

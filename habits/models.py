@@ -15,7 +15,7 @@ class Award(models.Model):
 
 class Habits(models.Model):
     """ Модель привычки. Приятной иои полезной. """
-
+    name = models.CharField(max_length=50, blank=True, null=True, help_text='Название привычки')
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True,
                              related_name='habits', verbose_name='Пользователь')
     place = models.CharField(max_length=100, help_text='Место в котором необходимо выполнять действие.')

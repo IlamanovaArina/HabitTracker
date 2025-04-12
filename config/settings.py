@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     # # 'django.contrib.staticfiles',  # требуется для обслуживания файлов css/js интерфейса swagger
     'drf_yasg',
     'corsheaders',
-    # 'django_celery_beat',
+    'django_celery_beat',
 
     'users',
     'habits',
@@ -130,46 +130,30 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 
-# # Настройки JWT-токенов
-# REST_FRAMEWORK = {
-#     'DEFAULT_AUTHENTICATION_CLASSES': [
-#         'rest_framework_simplejwt.authentication.JWTAuthentication',
-#     ],
-#     'DEFAULT_PERMISSION_CLASSES': [
-#         'rest_framework.permissions.AllowAny'
-#     ],
-#     'DEFAULT_RENDERER_CLASSES': (
-#             'rest_framework.renderers.JSONRenderer',)
-# }
-#
-#
-# # Настройки срока действия токенов
-# SIMPLE_JWT = {
-#     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
-#     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
-# }
+# Настройки для Celery
+# URL-адрес брокера сообщений
+CELERY_BROKER_URL = 'redis://localhost:6379/0' # Например, Redis, который по умолчанию работает на порту 6379
 
-# # Настройки для Celery
-# # URL-адрес брокера сообщений
-# CELERY_BROKER_URL = 'redis://localhost:6379/0' # Например, Redis, который по умолчанию работает на порту 6379
-#
-# # URL-адрес брокера результатов, также Redis
-# CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
-#
-# # Часовой пояс для работы Celery
-# # CELERY_TIMEZONE = "Moscow"
-# CELERY_TIMEZONE = TIME_ZONE
-#
-# # Флаг отслеживания выполнения задач
-# CELERY_TASK_TRACK_STARTED = True
-#
-# # Максимальное время на выполнение задачи
-# CELERY_TASK_TIME_LIMIT = 30 * 60
-#
+# URL-адрес брокера результатов, также Redis
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+
+# Часовой пояс для работы Celery
+CELERY_TIMEZONE = TIME_ZONE
+
+# Флаг отслеживания выполнения задач
+CELERY_TASK_TRACK_STARTED = True
+
+# Максимальное время на выполнение задачи
+CELERY_TASK_TIME_LIMIT = 30 * 60
+
 # CELERY_BEAT_SCHEDULE = {
 #     'task-name': {
 #         'task': 'materials.tasks.set_schedule',  # Путь к задаче
 #         'schedule': timedelta(days=1),  # Расписание выполнения задачи (например, каждые 10 минут)
 #     },
 # }
+
+# Переменные
+TELEGRAM_URL = "https://api.telegram.org/bot"
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 
