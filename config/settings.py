@@ -24,7 +24,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'rest_framework',
     # # 'django.contrib.staticfiles',  # требуется для обслуживания файлов css/js интерфейса swagger
-    # 'drf_yasg',
+    'drf_yasg',
     'corsheaders',
     # 'django_celery_beat',
 
