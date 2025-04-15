@@ -12,5 +12,5 @@ class AdminHabits(admin.ModelAdmin):
 
 @admin.register(Award)
 class AdminAward(admin.ModelAdmin):
-    list_display = ['id', 'name', 'owner', 'description', 'price']
+    list_display = ['id', 'name', 'user', 'description', 'price']
     list_filter = ['id', 'name', 'price',]

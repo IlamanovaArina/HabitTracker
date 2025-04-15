@@ -18,16 +18,19 @@ class HabitsViewSet(viewsets.ModelViewSet):
 
     def get_permissions(self):
         """ Разрешаем безопасные методы для публичных привычек """
-
         if self.request.method in ['GET', 'HEAD', 'OPTIONS']:
-            if self.action == 'list':
-                return super().get_permissions()
-
-            if self.action == 'retrieve':
-                habit = self.get_object()
-                if habit.is_public:
-                    return [IsAuthenticatedOrReadOnly()]
+            return [IsAuthenticatedOrReadOnly()]
         return super().get_permissions()
+
+    def retrieve(self, request, *args, **kwargs):
+        """ Проверяем, если привычка публичная, то её могут видеть все пользователи """
+        habit = self.get_object()
+        if habit.is_public:
+            self.permission_classes = [IsAuthenticatedOrReadOnly]
+        else:
+            self.permission_classes = [IsOwner]
+        self.check_permissions(request)
+        return super().retrieve(request, *args, **kwargs)
 
     def perform_create(self, serializer):
         """ Метод вносит изменение в сериализатор создания "Привычки" """

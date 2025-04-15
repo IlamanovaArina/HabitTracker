@@ -7,10 +7,10 @@ class Award(models.Model):
     """ Модель вознаграждения """
 
     name = models.CharField(max_length=100, help_text='Название')
-    owner = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True,
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True,
                               verbose_name='Владелец')
     description = models.TextField(max_length=200, blank=True, null=True, help_text='Описание')
-    price = models.IntegerField(default=0, verbose_name='Цена')
+    price = models.IntegerField(blank=True, null=True, verbose_name='Цена')
 
 
 class Habits(models.Model):

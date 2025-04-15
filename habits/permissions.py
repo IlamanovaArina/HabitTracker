@@ -8,7 +8,3 @@ class IsOwner(BasePermission):
             if obj.user == request.user:
                 return True
             return False
-        if obj.owner is not None:
-            if obj.owner == request.user:
-                return True
-            return False
