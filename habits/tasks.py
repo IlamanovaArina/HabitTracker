@@ -14,7 +14,7 @@ def send_telegram_message(chat_id, habit_name):
         'text': f'Не забудьте выполнить действие для привычки: {habit_name}.',
         'chat_id': chat_id,
     }
-    response = requests.get(f"{settings.TELEGRAM_URL}{settings.BOT_TOKEN}/sendMessage", params=params)
+    requests.get(f"{settings.TELEGRAM_URL}{settings.BOT_TOKEN}/sendMessage", params=params)
 
 
 @app.task

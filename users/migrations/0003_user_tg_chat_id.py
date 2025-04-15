@@ -13,6 +13,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='user',
             name='tg_chat_id',
-            field=models.CharField(blank=True, help_text='Укажите телеграм чат-id', null=True, verbose_name='Телеграм чат-id'),
+            field=models.CharField(blank=True, help_text='Укажите телеграм чат-id', null=True,
+                                   verbose_name='Телеграм чат-id'),
         ),
     ]

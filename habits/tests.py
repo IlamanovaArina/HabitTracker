@@ -146,8 +146,7 @@ class TestHabits(APITestCase):
             {'id': 3, 'name': 'Чайная встреча', 'place': 'ТЦ Красная площадь', 'time': '12:00:00',
              'action': 'Встретиться с подругой за чашечкой чая', 'pleasant_habits_sign': True, 'periodicity': 5,
              'time_to_complete': '00:01:00', 'is_public': False, 'user': 7, 'related_habit': None, 'award': None},
-            {'id': 4
-                , 'name': 'Пробежка', 'place': 'Парк', 'time': '12:00:00', 'action': 'Бегать',
+            {'id': 4, 'name': 'Пробежка', 'place': 'Парк', 'time': '12:00:00', 'action': 'Бегать',
              'pleasant_habits_sign': False, 'periodicity': 5, 'time_to_complete': '00:01:59', 'is_public': False,
              'user': 7, 'related_habit': 3, 'award': None}]}
 
@@ -186,4 +185,3 @@ class TestHabits(APITestCase):
 
 # coverage run --source='.' manage.py. test
 # coverage report
-

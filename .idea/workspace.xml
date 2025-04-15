@@ -149,7 +149,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744466339915</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Покрытие тестами на 93%">
+      <option name="closed" value="true" />
+      <created>1744729354952</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744729354952</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Покрытие тестами на 93%">
+      <option name="closed" value="true" />
+      <created>1744729365988</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1744729365988</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -158,6 +174,7 @@
     <MESSAGE value="Готовы валидаторы" />
     <MESSAGE value="Документация и доработаны валидаторы" />
     <MESSAGE value="Добавлена рассылка в телеграмм" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена рассылка в телеграмм" />
+    <MESSAGE value="Покрытие тестами на 93%" />
+    <option name="LAST_COMMIT_MESSAGE" value="Покрытие тестами на 93%" />
   </component>
 </project>

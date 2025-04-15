@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-from datetime import timedelta
 from dotenv import load_dotenv
 
 load_dotenv(override=True)
@@ -129,10 +128,9 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:9000",
 ]
 
-
 # Настройки для Celery
 # URL-адрес брокера сообщений
-CELERY_BROKER_URL = 'redis://localhost:6379/0' # Например, Redis, который по умолчанию работает на порту 6379
+CELERY_BROKER_URL = 'redis://localhost:6379/0'  # Например, Redis, который по умолчанию работает на порту 6379
 
 # URL-адрес брокера результатов, также Redis
 CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
@@ -156,4 +154,3 @@ CELERY_TASK_TIME_LIMIT = 30 * 60
 # Переменные
 TELEGRAM_URL = "https://api.telegram.org/bot"
 BOT_TOKEN = os.getenv('BOT_TOKEN')
-

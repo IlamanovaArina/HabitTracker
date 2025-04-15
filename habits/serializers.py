@@ -52,8 +52,6 @@ class HabitsSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 "Должно быть указано хотя бы одно из полей: связанная привычка или вознаграждение")
 
-
-
         self.validate_related_habit_or_award(attrs.get('related_habit'), attrs.get('award'))
         self.validate_time_to_complete(attrs.get('time_to_complete'))
         self.validate_related_habit_in_pleasant_habits_sign(attrs.get('related_habit'))
