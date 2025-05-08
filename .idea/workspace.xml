@@ -46,26 +46,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Run.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/one&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/minac.DESKTOP-L51PJSH/PycharmProjects/HabitTracker/manage.py&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Run.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/one",
+    "last_opened_file_path": "C:/Users/minac.DESKTOP-L51PJSH/PycharmProjects/HabitTracker"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker" />
       <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker\habits" />
       <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker\users" />
-      <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker" />
     </key>
   </component>
   <component name="RunManager">
@@ -165,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744729365988</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Поправила код с помощью линтеров">
+      <option name="closed" value="true" />
+      <created>1744729721343</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1744729721343</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -175,6 +183,7 @@
     <MESSAGE value="Документация и доработаны валидаторы" />
     <MESSAGE value="Добавлена рассылка в телеграмм" />
     <MESSAGE value="Покрытие тестами на 93%" />
-    <option name="LAST_COMMIT_MESSAGE" value="Покрытие тестами на 93%" />
+    <MESSAGE value="Поправила код с помощью линтеров" />
+    <option name="LAST_COMMIT_MESSAGE" value="Поправила код с помощью линтеров" />
   </component>
 </project>
