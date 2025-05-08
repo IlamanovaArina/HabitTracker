@@ -46,14 +46,19 @@ services:
     depends_on:
       - web
     environment:
+      - SECRET_KEY=${SECRET_KEY}
       - CELERY_BROKER_URL=redis://redis:6379/0
 
   celeri-beat:
     build: .
     command: celery -A config beat -l INFO -S django
+#    command: >
+#      sh -c "export DJANGO_SETTINGS_MODULE=myproject.settings && celery -A myproject worker --beat"
+
     depends_on:
       - web
     environment:
+#      - SECRET_KEY=${SECRET_KEY}
       - CELERY_BROKER_URL=redis://redis:6379/0
 
   nginx:

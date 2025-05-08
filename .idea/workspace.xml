@@ -173,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744729721343</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Добавила Dockerfile и docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1746723992435</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746723992435</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -184,6 +192,7 @@
     <MESSAGE value="Добавлена рассылка в телеграмм" />
     <MESSAGE value="Покрытие тестами на 93%" />
     <MESSAGE value="Поправила код с помощью линтеров" />
-    <option name="LAST_COMMIT_MESSAGE" value="Поправила код с помощью линтеров" />
+    <MESSAGE value="Добавила Dockerfile и docker-compose.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавила Dockerfile и docker-compose.yml" />
   </component>
 </project>
