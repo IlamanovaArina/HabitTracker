@@ -1,3 +1,4 @@
+import datetime
 from django.urls import reverse
 
 from rest_framework.test import APITestCase
@@ -82,35 +83,25 @@ class TestHabits(APITestCase):
         self.user.save()
         self.client.force_authenticate(user=self.user)  # Авторизация
         self.award = Award.objects.create(name="Вознаграждение", user=self.user)
-        # data = {
-        #     "name": "Чайная встреча",
-        #     "user": self.user,
-        #     "place": "ТЦ Красная площадь",
-        #     "time": "12:00:00",
-        #     "action": "Встретиться с подругой за чашечкой чая",
-        #     "pleasant_habits_sign": True,
-        #     "periodicity": 5,
-        #     "time_to_complete": "00:01:00"
-        # }
         self.habits_pleasant = Habits.objects.create(
             name="Чайная встреча",
             user=self.user,
             place="ТЦ Красная площадь",
-            time="12:00:00",
+            time=datetime.time(hour=12, minute=0),
             action="Встретиться с подругой за чашечкой чая",
             pleasant_habits_sign=True,
             periodicity=5,
-            time_to_complete="00:01:00"
+            time_to_complete=datetime.timedelta(minutes=1)  # вместо "00:01:00"
         )
         self.habit = Habits.objects.create(
             name="Пробежка",
             user=self.user,
             place="Парк",
-            time="12:00:00",
+            time=datetime.time(hour=12, minute=0),
             action="Бегать",
             related_habit=self.habits_pleasant,
             periodicity=5,
-            time_to_complete="00:01:59"
+            time_to_complete=datetime.timedelta(seconds=119)  # вместо "00:01:59"
         )
 
     def test_habits_post(self):
@@ -179,6 +170,7 @@ class TestHabits(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
     def tearDown(self):
+        """ Очистка тестовой дб каждый раз """
         self.user.delete()
 
 # coverage run --source='.' manage.py. test

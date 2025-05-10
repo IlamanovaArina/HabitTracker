@@ -46,21 +46,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Run.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/one&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/minac.DESKTOP-L51PJSH/PycharmProjects/HabitTracker&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Run.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/one",
+    "last_opened_file_path": "C:/Users/minac.DESKTOP-L51PJSH/PycharmProjects/HabitTracker",
+    "settings.editor.selected.configurable": "vcs.Git"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker" />
@@ -213,8 +214,123 @@
       <option name="project" value="LOCAL" />
       <updated>1746867521155</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Поправила тесты немного">
+      <option name="closed" value="true" />
+      <created>1746868190791</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1746868190791</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Поправила ci-cd">
+      <option name="closed" value="true" />
+      <created>1746868662212</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1746868662212</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Поправила ci-cd">
+      <option name="closed" value="true" />
+      <created>1746868746333</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1746868746333</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Поправила ci-cd">
+      <option name="closed" value="true" />
+      <created>1746869093108</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1746869093108</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Исправила отсутствие max_length в моделях в полях CharField">
+      <option name="closed" value="true" />
+      <created>1746869399342</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1746869399342</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Пробный запуск">
+      <option name="closed" value="true" />
+      <created>1746869514214</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1746869514214</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Пробный запуск">
+      <option name="closed" value="true" />
+      <created>1746869778946</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1746869778946</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Поправила отсутствие max_length в поле CharField">
+      <option name="closed" value="true" />
+      <created>1746869889274</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1746869889274</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Поправила отсутствие max_length в поле CharField">
+      <option name="closed" value="true" />
+      <created>1746869894446</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1746869894446</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Исправляю ошибку со старой миграцией">
+      <option name="closed" value="true" />
+      <created>1746870285795</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1746870285795</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746871237703</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1746871237703</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746871437169</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1746871437169</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Попытка исправить ошибку с пагинацией">
+      <option name="closed" value="true" />
+      <created>1746871738929</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1746871738929</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Написала модели" />
@@ -228,6 +344,14 @@
     <MESSAGE value="docker-compose.yml почти работает, осталось celeri-beat" />
     <MESSAGE value="Добавила ci-cd.yml и пропустила код через flake8" />
     <MESSAGE value="Проверяю, запускается ли ci-cd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Проверяю, запускается ли ci-cd" />
+    <MESSAGE value="Поправила тесты немного" />
+    <MESSAGE value="Поправила ci-cd" />
+    <MESSAGE value="Исправила отсутствие max_length в моделях в полях CharField" />
+    <MESSAGE value="Пробный запуск" />
+    <MESSAGE value="Поправила отсутствие max_length в поле CharField" />
+    <MESSAGE value="Исправляю ошибку со старой миграцией" />
+    <MESSAGE value="Попытка ..." />
+    <MESSAGE value="Попытка исправить ошибку с пагинацией" />
+    <option name="LAST_COMMIT_MESSAGE" value="Попытка исправить ошибку с пагинацией" />
   </component>
 </project>
