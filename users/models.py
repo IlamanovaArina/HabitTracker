@@ -22,10 +22,10 @@ class CustomUserManager(BaseUserManager):
 class User(AbstractUser):
     """ Модель пользователя """
     username = None
-    name = models.CharField(max_length=50, verbose_name='Имя', blank=True, null=True)
+    name = models.CharField(max_length=100, verbose_name='Имя', blank=True, null=True)
     email = models.EmailField(unique=True, verbose_name='Email')
     phone = models.CharField(max_length=11, blank=True, null=True, verbose_name='Номер телефона')
-    tg_chat_id = models.CharField(blank=True, null=True, verbose_name='Телеграм чат-id',
+    tg_chat_id = models.CharField(max_length=250, blank=True, null=True, verbose_name='Телеграм чат-id',
                                   help_text='Укажите телеграм чат-id')
 
     USERNAME_FIELD = 'email'
