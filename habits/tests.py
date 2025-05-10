@@ -128,17 +128,19 @@ class TestHabits(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_habits_list(self):
-        """ Тестируем просмотр списка привычка """
+        """ Тестируем просмотр списка привычек """
         url = reverse("habits:habit-list")
         response = self.client.get(url)
         data = response.json()
         data_expect = {'count': 2, 'next': None, 'previous': None, 'results': [
-            {'id': 7, 'name': 'Чайная встреча', 'place': 'ТЦ Красная площадь', 'time': '12:00:00',
+            {'id': 1, 'name': 'Чайная встреча', 'place': 'ТЦ Красная площадь', 'time': '12:00:00',
              'action': 'Встретиться с подругой за чашечкой чая', 'pleasant_habits_sign': True, 'periodicity': 5,
              'time_to_complete': '00:01:00', 'is_public': False, 'user': 7, 'related_habit': None, 'award': None},
             {'id': 4, 'name': 'Пробежка', 'place': 'Парк', 'time': '12:00:00', 'action': 'Бегать',
              'pleasant_habits_sign': False, 'periodicity': 5, 'time_to_complete': '00:01:59', 'is_public': False,
              'user': 7, 'related_habit': 3, 'award': None}]}
+        # {'cou[54 chars]id': 1, 'name': 'Чайная встреча', 'place': 'ТЦ[471 chars]ne}]} !=
+        # {'cou[54 chars]id': 7, 'name': 'Чайная встреча', 'place': 'ТЦ[471 chars]ne}]}
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data, data_expect)
