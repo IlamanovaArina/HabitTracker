@@ -31,14 +31,6 @@ class TestAward(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(data.get("price"), 100)
 
-    def test_award_retrieve(self):
-        """ Тестируем детализация объекта вознаграждение """
-        url = reverse("habits:award-detail", args=(self.award.id,))
-        response = self.client.get(url)
-        data = response.json()
-        self.assertEqual(data.get("id"), 6)
-        self.assertEqual(data.get("name"), "Вознаграждение")
-
     def test_award_list(self):
         """ Тестируем просмотр списка вознаграждений """
         url = reverse("habits:award-list")
@@ -47,11 +39,16 @@ class TestAward(APITestCase):
         data_expect = {'count': 1, 'next': None, 'previous': None, 'results': [
             {'id': 1, 'name': 'Вознаграждение', 'description': None, 'price': None, 'user': 1}
         ]}
-        # {'count': 1, 'next': None, 'previous': None, 'results': [
-        # {'id': 2, 'name': 'Вознаграждение', 'description': None, 'price': None, 'user': 2}]}
-        # print("То что должно быть", data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data, data_expect)
+
+    def test_award_retrieve(self):
+        """ Тестируем детализация объекта вознаграждение """
+        url = reverse("habits:award-detail", args=(self.award.id,))
+        response = self.client.get(url)
+        data = response.json()
+        self.assertEqual(data.get("id"), 1)
+        self.assertEqual(data.get("name"), "Вознаграждение")
 
     def test_award_put(self):
         """ Тестируем обновление объекта вознаграждение """
@@ -73,8 +70,8 @@ class TestAward(APITestCase):
         response = self.client.delete(url)
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
-    def tearDown(self):
-        self.user.delete()
+    # def tearDown(self):
+    #     self.user.delete()
 
 
 class TestHabits(APITestCase):
