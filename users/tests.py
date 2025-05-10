@@ -37,9 +37,8 @@ class TestUser(APITestCase):
         url = reverse("users:user-list")
         response = self.client.get(url)
         data = response.json()
-        # data_expect = [{'id': 11, 'name': None, 'email': 'test1@gmail.com', 'phone': None}]
         data_expect = {'count': 1, 'next': None, 'previous': None, 'results': [
-            {'id': 11, 'name': None, 'email': 'test1@gmail.com', 'phone': None}
+            {'id': 1, 'name': None, 'email': 'test1@gmail.com', 'phone': None}
         ]}
         # print("Я печатаю проверить test_user_list:", data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)

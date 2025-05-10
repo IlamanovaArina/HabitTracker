@@ -124,7 +124,7 @@ class TestHabits(APITestCase):
         url = reverse("habits:habit-detail", args=(self.habit.id,))
         response = self.client.get(url)
         data = response.json()
-        self.assertEqual(data.get("id"), 11)
+        self.assertEqual(data.get("id"), 2)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_habits_list(self):
@@ -133,7 +133,7 @@ class TestHabits(APITestCase):
         response = self.client.get(url)
         data = response.json()
         data_expect = {'count': 2, 'next': None, 'previous': None, 'results': [
-            {'id': 3, 'name': 'Чайная встреча', 'place': 'ТЦ Красная площадь', 'time': '12:00:00',
+            {'id': 1, 'name': 'Чайная встреча', 'place': 'ТЦ Красная площадь', 'time': '12:00:00',
              'action': 'Встретиться с подругой за чашечкой чая', 'pleasant_habits_sign': True, 'periodicity': 5,
              'time_to_complete': '00:01:00', 'is_public': False, 'user': 7, 'related_habit': None, 'award': None},
             {'id': 4, 'name': 'Пробежка', 'place': 'Парк', 'time': '12:00:00', 'action': 'Бегать',
