@@ -205,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746866429052</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Проверяю, запускается ли ci-cd">
+      <option name="closed" value="true" />
+      <created>1746867521155</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1746867521155</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -219,6 +227,7 @@
     <MESSAGE value="Добавила Dockerfile и docker-compose.yml" />
     <MESSAGE value="docker-compose.yml почти работает, осталось celeri-beat" />
     <MESSAGE value="Добавила ci-cd.yml и пропустила код через flake8" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавила ci-cd.yml и пропустила код через flake8" />
+    <MESSAGE value="Проверяю, запускается ли ci-cd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Проверяю, запускается ли ci-cd" />
   </component>
 </project>

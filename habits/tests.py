@@ -43,8 +43,9 @@ class TestAward(APITestCase):
         url = reverse("habits:award-list")
         response = self.client.get(url)
         data = response.json()
-        data_expect = [{'id': 2, 'name': 'Вознаграждение', 'description': None, 'price': None, 'user': 2}]
-        # print("data:", data)
+        data_expect = {'count': 1, 'next': None, 'previous': None, 'results': [
+            {'id': 2, 'name': 'Вознаграждение', 'description': None, 'price': None, 'user': 2}
+        ]}
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data, data_expect)
 
@@ -150,7 +151,6 @@ class TestHabits(APITestCase):
              'pleasant_habits_sign': False, 'periodicity': 5, 'time_to_complete': '00:01:59', 'is_public': False,
              'user': 7, 'related_habit': 3, 'award': None}]}
 
-        # print("data:", data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data, data_expect)
 

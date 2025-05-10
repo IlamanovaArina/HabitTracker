@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
                 ('periodicity', models.IntegerField(default=2, help_text='Периодичность(в днях)')),
                 (
                  'time_to_complete', models.DurationField(default=datetime.time(0, 1),
-                                                         help_text='Время на выполнение')),
+                                                          help_text='Время на выполнение')),
                 ('sign_of_publicity', models.BooleanField(default=False, help_text='Признак публичности')),
             ],
         ),
