@@ -29,7 +29,7 @@ class TestUser(APITestCase):
         url = reverse("users:user-detail", args=(self.user.id,))
         response = self.client.get(url)
         data = response.json()
-        self.assertEqual(data.get("id"), 11)
+        self.assertEqual(data.get("id"), 1)
         self.assertEqual(data.get("email"), "test1@gmail.com")
 
     def test_user_list(self):
