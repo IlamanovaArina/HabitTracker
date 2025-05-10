@@ -406,7 +406,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746874507078</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Попытка исправляю Login in Docker hub">
+      <option name="closed" value="true" />
+      <created>1746875163255</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1746875163255</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -441,6 +449,7 @@
     <MESSAGE value="Попытка ..." />
     <MESSAGE value="Попытка исправить ошибку с пагинацией" />
     <MESSAGE value="Попытка подредактировала тесты" />
-    <option name="LAST_COMMIT_MESSAGE" value="Попытка подредактировала тесты" />
+    <MESSAGE value="Попытка исправляю Login in Docker hub" />
+    <option name="LAST_COMMIT_MESSAGE" value="Попытка исправляю Login in Docker hub" />
   </component>
 </project>
