@@ -9,9 +9,6 @@ from users.models import User
 class TestUser(APITestCase):
     """ Тесты для модели пользователя  """
 
-    # def setUp(self):
-    #     self.user = User.objects.create_user(email="test1@gmail.com", password="123qaz123")
-
     @classmethod
     def setUpTestData(cls):
         cls.user = User.objects.create_user(email="test1@gmail.com", password="123qaz123")
