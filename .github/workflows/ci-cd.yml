@@ -78,7 +78,7 @@ jobs:
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker:latest
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker-nginx:latest
   run_server:
-    needs: [ build, copy_files_in_server ]
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
