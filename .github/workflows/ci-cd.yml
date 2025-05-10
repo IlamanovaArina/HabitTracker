@@ -82,7 +82,9 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_KEY_PRIVATE }}
       - name: Проверка IP сервера
         run:
-          echo "IP сервера: ${{ secrets.SERVER_IP }}"
+          echo "IP сервера: $SERVER_IP"
+        env:
+          SERVER_IP: ${{ secrets.SERVER_IP }}
       - name: Copy file
         uses: appleboy/scp-action@v0.1.7
         with:
