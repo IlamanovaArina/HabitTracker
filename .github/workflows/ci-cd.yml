@@ -73,7 +73,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
       - name: Create .env file
-        run: >
+        run: |
           touch .env
           echo '"${{ secrets.ENV_FILE }}"' | sed "s/\"//g" > .env  # Удаление кавычек в файле. P.S. их не должно быть в секретах
       - name: Set up SSH
@@ -81,7 +81,7 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_KEY_PRIVATE }}
       - name: Проверка IP сервера
-        run: |
+        run:
           echo "IP сервера: ${{ secrets.SERVER_IP }}"
       - name: Copy file
         uses: appleboy/scp-action@v0.1.7
