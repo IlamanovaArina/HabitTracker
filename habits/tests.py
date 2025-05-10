@@ -59,7 +59,6 @@ class TestAward(APITestCase):
         }
         response = self.client.put(url, data, content_type='application/json')
         data_json = response.json()
-        # print(data_json)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data_json.get("prise"), data.get("prise"))
 
@@ -127,7 +126,6 @@ class TestHabits(APITestCase):
             "time_to_complete": "00:01:00"
         }
         response = self.client.post(url, data=data)
-        # print(response.json())
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_habits_retrieve(self):
