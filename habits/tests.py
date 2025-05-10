@@ -141,6 +141,8 @@ class TestHabits(APITestCase):
              'user': 7, 'related_habit': 3, 'award': None}]}
         # {'cou[54 chars]id': 1, 'name': 'Чайная встреча', 'place': 'ТЦ[471 chars]ne}]} !=
         # {'cou[54 chars]id': 7, 'name': 'Чайная встреча', 'place': 'ТЦ[471 chars]ne}]}
+        print("data", data)
+        print("data_expect", data_expect)
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data, data_expect)
