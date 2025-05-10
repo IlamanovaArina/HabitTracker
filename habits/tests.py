@@ -135,14 +135,28 @@ class TestHabits(APITestCase):
         data_expect = {'count': 2, 'next': None, 'previous': None, 'results': [
             {'id': 1, 'name': 'Чайная встреча', 'place': 'ТЦ Красная площадь', 'time': '12:00:00',
              'action': 'Встретиться с подругой за чашечкой чая', 'pleasant_habits_sign': True, 'periodicity': 5,
-             'time_to_complete': '00:01:00', 'is_public': False, 'user': 7, 'related_habit': None, 'award': None},
+             'time_to_complete': '00:01:00', 'is_public': False, 'user': 1, 'related_habit': None, 'award': None},
             {'id': 4, 'name': 'Пробежка', 'place': 'Парк', 'time': '12:00:00', 'action': 'Бегать',
              'pleasant_habits_sign': False, 'periodicity': 5, 'time_to_complete': '00:01:59', 'is_public': False,
              'user': 7, 'related_habit': 3, 'award': None}]}
-        # {'cou[54 chars]id': 1, 'name': 'Чайная встреча', 'place': 'ТЦ[471 chars]ne}]} !=
-        # {'cou[54 chars]id': 7, 'name': 'Чайная встреча', 'place': 'ТЦ[471 chars]ne}]}
-        print("data", data)
-        print("data_expect", data_expect)
+
+        # print("data", data)
+        # print("data_expect", data_expect)
+        #
+        # data = {'count': 2, 'next': None, 'previous': None, 'results': [
+        #     {'id': 1, 'name': 'Чайная встреча', 'place': 'ТЦ Красная площадь', 'time': '12:00:00',
+        #      'action': 'Встретиться с подругой за чашечкой чая', 'pleasant_habits_sign': True, 'periodicity': 5,
+        #      'time_to_complete': '00:01:00', 'is_public': False, 'user': 1, 'related_habit': None, 'award': None},
+        #     {'id': 2, 'name': 'Пробежка', 'place': 'Парк', 'time': '12:00:00', 'action': 'Бегать',
+        #      'pleasant_habits_sign': False, 'periodicity': 5, 'time_to_complete': '00:01:59', 'is_public': False,
+        #      'user': 1, 'related_habit': 1, 'award': None}]}
+        # data_expect = {'count': 2, 'next': None, 'previous': None, 'results': [
+        #     {'id': 1, 'name': 'Чайная встреча', 'place': 'ТЦ Красная площадь', 'time': '12:00:00',
+        #      'action': 'Встретиться с подругой за чашечкой чая', 'pleasant_habits_sign': True, 'periodicity': 5,
+        #      'time_to_complete': '00:01:00', 'is_public': False, 'user': 7, 'related_habit': None, 'award': None},
+        #     {'id': 4, 'name': 'Пробежка', 'place': 'Парк', 'time': '12:00:00', 'action': 'Бегать',
+        #      'pleasant_habits_sign': False, 'periodicity': 5, 'time_to_complete': '00:01:59', 'is_public': False,
+        #      'user': 7, 'related_habit': 3, 'award': None}]}
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data, data_expect)
