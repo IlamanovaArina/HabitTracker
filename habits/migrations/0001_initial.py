@@ -5,7 +5,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -25,12 +24,16 @@ class Migration(migrations.Migration):
             name='Habits',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('place', models.CharField(help_text='Место в котором необходимо выполнять действие.', max_length=100)),
+                ('place', models.CharField(help_text='Место в котором необходимо выполнять действие.',
+                                           max_length=100)),
                 ('tame', models.TimeField(help_text='Время, когда не обходимо выполнять действие.')),
                 ('action', models.CharField(help_text='Само действие', max_length=250)),
-                ('pleasant_habits_sign', models.BooleanField(blank=True, help_text='Признак приятной привычки', null=True)),
+                ('pleasant_habits_sign',
+                 models.BooleanField(blank=True, help_text='Признак приятной привычки', null=True)),
                 ('periodicity', models.IntegerField(default=2, help_text='Периодичность(в днях)')),
-                ('time_to_complete', models.DurationField(default=datetime.time(0, 1), help_text='Время на выполнение')),
+                (
+                 'time_to_complete', models.DurationField(default=datetime.time(0, 1),
+                                                         help_text='Время на выполнение')),
                 ('sign_of_publicity', models.BooleanField(default=False, help_text='Признак публичности')),
             ],
         ),

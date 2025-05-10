@@ -46,21 +46,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Run.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/one",
-    "last_opened_file_path": "C:/Users/minac.DESKTOP-L51PJSH/PycharmProjects/HabitTracker"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Run.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/one&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/minac.DESKTOP-L51PJSH/PycharmProjects/HabitTracker&quot;
   },
-  "keyToStringList": {
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker" />
@@ -181,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746723992435</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="docker-compose.yml почти работает, осталось celeri-beat">
+      <option name="closed" value="true" />
+      <created>1746735074668</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746735074678</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -193,6 +201,7 @@
     <MESSAGE value="Покрытие тестами на 93%" />
     <MESSAGE value="Поправила код с помощью линтеров" />
     <MESSAGE value="Добавила Dockerfile и docker-compose.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавила Dockerfile и docker-compose.yml" />
+    <MESSAGE value="docker-compose.yml почти работает, осталось celeri-beat" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker-compose.yml почти работает, осталось celeri-beat" />
   </component>
 </project>
