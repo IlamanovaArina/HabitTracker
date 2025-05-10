@@ -64,8 +64,8 @@ jobs:
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/HabitTracker_nginx:latest nginx/.
       - name: Push Docker image to Docker Hub
         run: |
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/myapp:latest
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/nginx:latest
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/HabitTracker:latest
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/HabitTracker_nginx:latest
   copy_files_in_server:
     needs: test
     runs-on: ubuntu-latest
