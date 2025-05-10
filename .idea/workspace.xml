@@ -46,22 +46,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Run.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/one",
-    "last_opened_file_path": "C:/Users/minac.DESKTOP-L51PJSH/PycharmProjects/HabitTracker",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Run.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#2 on feature/one&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/minac.DESKTOP-L51PJSH/PycharmProjects/HabitTracker&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   },
-  "keyToStringList": {
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker" />
@@ -414,7 +414,87 @@
       <option name="project" value="LOCAL" />
       <updated>1746875163255</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Попытка исправила в Copy file отсутствие кавычек">
+      <option name="closed" value="true" />
+      <created>1746878195101</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1746878195101</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746878500220</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1746878500220</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746881199074</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1746881199074</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746882287416</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1746882287416</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746882834282</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1746882834282</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746884732934</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1746884732934</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746884895842</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1746884895842</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746893192206</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1746893192207</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746898281648</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1746898281648</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746898391436</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1746898391436</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -446,10 +526,11 @@
     <MESSAGE value="Пробный запуск" />
     <MESSAGE value="Поправила отсутствие max_length в поле CharField" />
     <MESSAGE value="Исправляю ошибку со старой миграцией" />
-    <MESSAGE value="Попытка ..." />
     <MESSAGE value="Попытка исправить ошибку с пагинацией" />
     <MESSAGE value="Попытка подредактировала тесты" />
     <MESSAGE value="Попытка исправляю Login in Docker hub" />
-    <option name="LAST_COMMIT_MESSAGE" value="Попытка исправляю Login in Docker hub" />
+    <MESSAGE value="Попытка исправила в Copy file отсутствие кавычек" />
+    <MESSAGE value="Попытка ..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Попытка ..." />
   </component>
 </project>

@@ -66,9 +66,11 @@ jobs:
         run: |
           touch .env
           echo '"${{ secrets.SECRET_KEY }}"' | sed "s/\"//g" > .env
+
       - name: Login to Docker Hub
         run: |
           echo "${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}" | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
+
       - name: Build Docker image
         run: |
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker:latest .
