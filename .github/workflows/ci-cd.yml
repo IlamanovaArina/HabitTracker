@@ -39,8 +39,9 @@ jobs:
       - name: Run migrations
         env:
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
-#          TESTING: "1"
         run: python manage.py migrate
+      - name: Create static directory
+        run: mkdir -p /home/runner/work/HabitTracker/HabitTracker/static
       - name: Run tests
         run: python manage.py test --noinput
   build:

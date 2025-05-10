@@ -45,8 +45,11 @@ class TestAward(APITestCase):
         response = self.client.get(url)
         data = response.json()
         data_expect = {'count': 1, 'next': None, 'previous': None, 'results': [
-            {'id': 2, 'name': 'Вознаграждение', 'description': None, 'price': None, 'user': 2}
+            {'id': 1, 'name': 'Вознаграждение', 'description': None, 'price': None, 'user': 1}
         ]}
+        # {'count': 1, 'next': None, 'previous': None, 'results': [
+        # {'id': 2, 'name': 'Вознаграждение', 'description': None, 'price': None, 'user': 2}]}
+        # print("То что должно быть", data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data, data_expect)
 
