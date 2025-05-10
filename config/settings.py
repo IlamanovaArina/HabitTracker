@@ -2,12 +2,14 @@ import os
 from datetime import timedelta
 from pathlib import Path
 from dotenv import load_dotenv
+from django.core.management.utils import get_random_secret_key
 
 load_dotenv(override=True)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+# SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY') or get_random_secret_key()
 
 DEBUG = True if os.getenv('DEBUG') == 'True' else False
 
@@ -63,8 +65,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 if os.getenv('TESTING') == '1':
-    print("База данных определена как: sqlite3")
-    print(str(BASE_DIR / 'test_db.sqlite3'), type(str(BASE_DIR / 'test_db.sqlite3')))
+    # print("База данных определена как: sqlite3")
+    # print(str(BASE_DIR / 'test_db.sqlite3'), type(str(BASE_DIR / 'test_db.sqlite3')))
     DATABASES = {
         "default": {
             'ENGINE': 'django.db.backends.sqlite3',
