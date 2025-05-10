@@ -136,13 +136,14 @@ class TestHabits(APITestCase):
             {'id': 1, 'name': 'Чайная встреча', 'place': 'ТЦ Красная площадь', 'time': '12:00:00',
              'action': 'Встретиться с подругой за чашечкой чая', 'pleasant_habits_sign': True, 'periodicity': 5,
              'time_to_complete': '00:01:00', 'is_public': False, 'user': 1, 'related_habit': None, 'award': None},
-            {'id': 4, 'name': 'Пробежка', 'place': 'Парк', 'time': '12:00:00', 'action': 'Бегать',
+            {'id': 2, 'name': 'Пробежка', 'place': 'Парк', 'time': '12:00:00', 'action': 'Бегать',
              'pleasant_habits_sign': False, 'periodicity': 5, 'time_to_complete': '00:01:59', 'is_public': False,
              'user': 7, 'related_habit': 3, 'award': None}]}
 
         # print("data", data)
         # print("data_expect", data_expect)
-        #
+
+        # #
         # data = {'count': 2, 'next': None, 'previous': None, 'results': [
         #     {'id': 1, 'name': 'Чайная встреча', 'place': 'ТЦ Красная площадь', 'time': '12:00:00',
         #      'action': 'Встретиться с подругой за чашечкой чая', 'pleasant_habits_sign': True, 'periodicity': 5,
