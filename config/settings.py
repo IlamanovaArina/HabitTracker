@@ -14,7 +14,7 @@ SECRET_KEY = os.getenv('SECRET_KEY') or get_random_secret_key()
 DEBUG = True if os.getenv('DEBUG') == 'True' else False
 
 # ALLOWED_HOSTS = ['158.160.182.163', 'django']
-ALLOWED_HOSTS = ['django', ]
+ALLOWED_HOSTS = ['django', 'web']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
