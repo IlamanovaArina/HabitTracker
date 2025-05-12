@@ -75,10 +75,14 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/online-training:latest .
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/online-training-nginx:latest nginx/.
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-worker:latest celeri-worker .
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-beat:latest celeri-beat .
       - name: Push Docker image to Docker Hub
         run: |
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/online-training:latest
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/online-training-nginx:latest
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-worker:latest
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-beat:latest
 
   copy_files_in_server:
     needs: test
