@@ -51,7 +51,7 @@
     &quot;Python.Run.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;#2 on feature/one&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/minac.DESKTOP-L51PJSH/PycharmProjects/HabitTracker&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/minac.DESKTOP-L51PJSH/PycharmProjects/HabitTracker/.github/workflows&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -64,6 +64,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker\.github\workflows" />
       <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker" />
       <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker\habits" />
       <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker\users" />
@@ -109,30 +110,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1744052181370</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Написала модели">
-      <option name="closed" value="true" />
-      <created>1744311828528</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1744311828528</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Готовы views, serializers, permissions">
-      <option name="closed" value="true" />
-      <created>1744359127309</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1744359127309</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Готовы валидаторы">
-      <option name="closed" value="true" />
-      <created>1744363108302</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1744363108302</updated>
     </task>
     <task id="LOCAL-00004" summary="Документация и доработаны валидаторы">
       <option name="closed" value="true" />
@@ -494,7 +471,39 @@
       <option name="project" value="LOCAL" />
       <updated>1746898391436</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746900064366</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1746900064366</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746974965416</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1746974965417</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746986802923</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1746986802923</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746987530578</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1746987530578</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

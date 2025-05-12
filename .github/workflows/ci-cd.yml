@@ -106,7 +106,7 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SERVER_IP: ${{ secrets.SERVER_IP }}
         run: |
-          ssh -o StrictHostKeyChecking=no -vT ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << EOF
+          ssh -o StrictHostKeyChecking=no -vT ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
             echo "Переход в каталог: ${{ secrets.DEPLOY_DIR }}"
             ls -ld "${{ secrets.DEPLOY_DIR }}"
             cd "${{ secrets.DEPLOY_DIR }}"
