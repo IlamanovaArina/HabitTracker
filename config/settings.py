@@ -13,7 +13,7 @@ SECRET_KEY = os.getenv('SECRET_KEY') or get_random_secret_key()
 
 DEBUG = True if os.getenv('DEBUG') == 'True' else False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['158.160.182.163', 'localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -131,6 +131,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://localhost:8080",
     "http://localhost:8000",
     "http://127.0.0.1:9000",
+    "http://158.160.182.163"
 ]
 
 LANGUAGE_CODE = 'en-us'
