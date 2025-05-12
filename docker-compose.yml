@@ -40,7 +40,7 @@ services:
       - .env
 
   celeri-worker:
-    build: .
+    image: ariena/celeri-worker:latest
     command: celery -A config worker -l INFO
     depends_on:
       - web
@@ -49,7 +49,7 @@ services:
       - CELERY_BROKER_URL=redis://redis:6379/0
 
   celeri-beat:
-    build: .
+    image: ariena/celeri-beat:latest
     command: celery -A config beat -l INFO -S django
 
     depends_on:
