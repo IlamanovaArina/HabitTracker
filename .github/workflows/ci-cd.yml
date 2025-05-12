@@ -101,13 +101,8 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_KEY_PRIVATE }}
 
       - name: Run Commands via SSH
-        env:
-          DEPLOY_DIR: ${{ secrets.DEPLOY_DIR }}
-          SSH_USER: ${{ secrets.SSH_USER }}
-          SERVER_IP: ${{ secrets.SERVER_IP }}
         run: |
           ssh -o StrictHostKeyChecking=no -vT ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
-            echo "Переход в каталог: ${{ secrets.DEPLOY_DIR }}"
             ls -ld "${{ secrets.DEPLOY_DIR }}"
             cd "${{ secrets.DEPLOY_DIR }}"
             sudo docker compose down
