@@ -1,12 +1,11 @@
 services:
   web:
-    build: .
+    image: ariena/online-training:latest
     command: sh -c "python manage.py collectstatic --noinput && gunicorn config.wsgi:application --bind 0.0.0.0:8000"
     environment:
       - DEBUG=True
       - HOST=db
     volumes:
-      - .:/app
       - static_volume:/media
     env_file:
       - .env
@@ -59,8 +58,7 @@ services:
       - CELERY_BROKER_URL=redis://redis:6379/0
 
   nginx:
-    build:
-      context: ./nginx
+    image: ariena/online-training-nginx:latest
     ports:
       - "80:80"
     volumes:

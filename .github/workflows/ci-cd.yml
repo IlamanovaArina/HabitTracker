@@ -90,22 +90,12 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_KEY_PRIVATE }}
 
-      - name: Verify Docker Hub images
-        run: |
-          docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/online-training:latest
-          docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/online-training-nginx:latest
-
-      - name: Add SSH Key
-        uses: webfactory/ssh-agent@v0.8.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_KEY_PRIVATE }}
-
       - name: Run Commands via SSH
         run: |
           ssh -o StrictHostKeyChecking=no -vT ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
             ls -ld "${{ secrets.DEPLOY_DIR }}"
             cd "${{ secrets.DEPLOY_DIR }}"
             sudo docker compose down
-            sudo docker container rm \$(docker ps -a -q)
-            sudo docker compose up -d --build
+            sudo docker container prune -f
+            sudo docker compose up -d
           EOF
