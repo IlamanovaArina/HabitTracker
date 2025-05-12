@@ -80,8 +80,29 @@ jobs:
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/online-training:latest
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/online-training-nginx:latest
 
+  copy_files_in_server:
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Create .env file
+        run: |
+          touch .env
+          echo '"${{ secrets.ENV_FILE }}"' | sed "s/\"//g" > .env
+
+      - name: copy file
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY_PRIVATE }}
+          source: "docker-compose.yml,.env"
+          target: ${{ secrets.DEPLOY_DIR }}
+
   run_server:
-    needs: build
+    needs: [build, copy_files_in_server]
     runs-on: ubuntu-latest
 
     steps:
@@ -93,7 +114,6 @@ jobs:
       - name: Run Commands via SSH
         run: |
           ssh -o StrictHostKeyChecking=no -vT ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
-            ls -ld "${{ secrets.DEPLOY_DIR }}"
             cd "${{ secrets.DEPLOY_DIR }}"
             sudo docker compose down
             sudo docker container prune -f
