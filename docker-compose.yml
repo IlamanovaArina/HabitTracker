@@ -44,18 +44,16 @@ services:
     command: celery -A config worker -l INFO
     depends_on:
       - web
-    environment:
-      - SECRET_KEY=${SECRET_KEY}
-      - CELERY_BROKER_URL=redis://redis:6379/0
+    env_file:
+      - .env
 
   celeri-beat:
     image: ariena/celeri-beat:latest
     command: celery -A config beat -l INFO -S django
-
     depends_on:
       - web
-    environment:
-      - CELERY_BROKER_URL=redis://redis:6379/0
+    env_file:
+      - .env
 
   nginx:
     image: ariena/online-training-nginx:latest
