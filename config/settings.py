@@ -3,6 +3,24 @@ from datetime import timedelta
 from pathlib import Path
 from dotenv import load_dotenv
 from django.core.management.utils import get_random_secret_key
+# import logging
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}
 
 load_dotenv(override=True)
 
