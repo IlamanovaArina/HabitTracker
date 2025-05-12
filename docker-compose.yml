@@ -34,14 +34,10 @@ services:
     image: redis:latest
     ports:
       - "6379:6379"
-    volumes:
-      - redis_data:/data
-    env_file:
-      - .env
 
   celeri-worker:
     image: ariena/celeri-worker:latest
-    command: celery -A config worker -l INFO
+    command: bash -c "celery -A config worker --loglevel=info"
     depends_on:
       - web
     env_file:
@@ -49,7 +45,7 @@ services:
 
   celeri-beat:
     image: ariena/celeri-beat:latest
-    command: celery -A config beat -l INFO -S django
+    command: bash -c "celery -A config beat --loglevel=info"
     depends_on:
       - web
     env_file:
@@ -61,7 +57,6 @@ services:
       - "80:80"
     volumes:
       - static_volume:/app/staticfiles
-      - ./html:/usr/share/nginx/html
     depends_on:
       - web
 
@@ -72,4 +67,3 @@ volumes:
 #  Объявляем тома для сохранения данных между перезапусками
   postgres_data:
   static_volume:
-  redis_data:
