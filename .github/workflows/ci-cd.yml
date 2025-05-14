@@ -119,7 +119,18 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no -vT ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
             cd "${{ secrets.DEPLOY_DIR }}"
+            sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+            curl ifconfig.me
             sudo docker compose down
             sudo docker container prune -f
             sudo docker compose up -d
           EOF
+
+#      - name: Deploy to Server
+#        run: |
+#          ssh -o StrictHostKeyChecking=no -vT ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
+#            sudo docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/atomic-habits:${{ github.sha }}
+#            sudo docker stop atomic-habits || true
+#            sudo docker rm atomic-habits || true
+#            sudo docker run -d --name atomic-habits -p 80:8000 ${{ secrets.DOCKER_HUB_USERNAME }}/atomic-habits:${{ github.sha }}
+#          EOF
