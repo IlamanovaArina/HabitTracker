@@ -73,14 +73,14 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/online-training:latest .
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/online-training-nginx:latest nginx/.
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker:latest .
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker-nginx:latest nginx/.
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-worker:latest .
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-beat:latest .
       - name: Push Docker image to Docker Hub
         run: |
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/online-training:latest
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/online-training-nginx:latest
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker:latest
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker-nginx:latest
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-worker:latest
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-beat:latest
 
