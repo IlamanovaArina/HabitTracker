@@ -3,24 +3,6 @@ from datetime import timedelta
 from pathlib import Path
 from dotenv import load_dotenv
 from django.core.management.utils import get_random_secret_key
-# import logging
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django.request': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
-            'propagate': False,
-        },
-    },
-}
 
 load_dotenv(override=True)
 
@@ -32,7 +14,7 @@ SECRET_KEY = os.getenv('SECRET_KEY') or get_random_secret_key()
 DEBUG = True if os.getenv('DEBUG') == 'True' else False
 
 # ALLOWED_HOSTS = ['158.160.182.163', 'django']
-ALLOWED_HOSTS = ['django', 'web', ]
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
