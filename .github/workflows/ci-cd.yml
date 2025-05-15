@@ -123,11 +123,14 @@ jobs:
           ssh -o StrictHostKeyChecking=no -vT ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
             cd "${{ secrets.DEPLOY_DIR }}"
           
-            # Остановить и удалить текущие контейнеры
-            sudo docker compose down
+            # Остановить все контейнеры
+            sudo docker ps -aq | xargs -r sudo docker rm -f
           
-            # Очистить неиспользуемые контейнеры и образы (опционально)
-            sudo docker system prune -f
+            # Удалить все образы, связанные с проектом
+            sudo docker images -q | xargs -r sudo docker rmi -f
+          
+            # Очистить все неиспользуемые данные
+            sudo docker system prune -f --volumes
           
             # Обновить образы из Docker Hub
             sudo docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker:latest
@@ -135,6 +138,6 @@ jobs:
             sudo docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-worker:latest
             sudo docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-beat:latest
           
-            # Запустить контейнеры с обновленными образами
+            # Запустить контейнеры
             sudo docker compose up -d --build
           EOF
