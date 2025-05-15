@@ -50,8 +50,9 @@
   &quot;keyToString&quot;: {
     &quot;Python.Run.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/one&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/minac.DESKTOP-L51PJSH/PycharmProjects/HabitTracker/manage.py&quot;
+    &quot;git-widget-placeholder&quot;: &quot;#2 on feature/one&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/minac.DESKTOP-L51PJSH/PycharmProjects/HabitTracker/.github/workflows&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
@@ -63,9 +64,10 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker\.github\workflows" />
+      <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker" />
       <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker\habits" />
       <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker\users" />
-      <recent name="C:\Users\minac.DESKTOP-L51PJSH\PycharmProjects\HabitTracker" />
     </key>
   </component>
   <component name="RunManager">
@@ -109,48 +111,411 @@
       <option name="presentableId" value="Default" />
       <updated>1744052181370</updated>
     </task>
-    <task id="LOCAL-00001" summary="Написала модели">
+    <task id="LOCAL-00037" summary="Попытка подредактировала тесты">
       <option name="closed" value="true" />
-      <created>1744311828528</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
+      <created>1746874507078</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
-      <updated>1744311828528</updated>
+      <updated>1746874507078</updated>
     </task>
-    <task id="LOCAL-00002" summary="Готовы views, serializers, permissions">
+    <task id="LOCAL-00038" summary="Попытка исправляю Login in Docker hub">
       <option name="closed" value="true" />
-      <created>1744359127309</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
+      <created>1746875163255</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
-      <updated>1744359127309</updated>
+      <updated>1746875163255</updated>
     </task>
-    <task id="LOCAL-00003" summary="Готовы валидаторы">
+    <task id="LOCAL-00039" summary="Попытка исправила в Copy file отсутствие кавычек">
       <option name="closed" value="true" />
-      <created>1744363108302</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
+      <created>1746878195101</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
       <option name="project" value="LOCAL" />
-      <updated>1744363108302</updated>
+      <updated>1746878195101</updated>
     </task>
-    <task id="LOCAL-00004" summary="Документация и доработаны валидаторы">
+    <task id="LOCAL-00040" summary="Попытка ...">
       <option name="closed" value="true" />
-      <created>1744452341438</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
+      <created>1746878500220</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
       <option name="project" value="LOCAL" />
-      <updated>1744452341438</updated>
+      <updated>1746878500220</updated>
     </task>
-    <task id="LOCAL-00005" summary="Добавлена рассылка в телеграмм">
+    <task id="LOCAL-00041" summary="Попытка ...">
       <option name="closed" value="true" />
-      <created>1744466339915</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
+      <created>1746881199074</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
       <option name="project" value="LOCAL" />
-      <updated>1744466339915</updated>
+      <updated>1746881199074</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00042" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746882287416</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1746882287416</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746882834282</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1746882834282</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746884732934</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1746884732934</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746884895842</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1746884895842</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746893192206</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1746893192207</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746898281648</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1746898281648</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746898391436</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1746898391436</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746900064366</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1746900064366</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746974965416</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1746974965417</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746986802923</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1746986802923</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1746987530578</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1746987530578</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747064109864</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1747064109864</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747064625876</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1747064625876</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747064971100</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1747064971100</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747065338431</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1747065338431</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747065411046</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1747065411046</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747065796505</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1747065796505</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747066014683</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1747066014683</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747066074107</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1747066074107</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747066419973</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1747066419973</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747066656291</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1747066656291</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747067319543</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1747067319543</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747068223354</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1747068223354</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747068385331</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1747068385331</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747069149615</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1747069149615</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747069562366</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1747069562366</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747069861619</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1747069861619</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747070484652</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1747070484652</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747071660246</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1747071660246</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747072086871</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1747072086871</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747072777518</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1747072777518</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747072831373</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1747072831374</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747072961746</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1747072961746</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747073215989</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1747073215989</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747073658126</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1747073658126</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747074388802</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1747074388802</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747074702925</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1747074702925</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747243811921</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1747243811921</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747244838298</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1747244838298</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747246911105</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1747246911105</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747248251509</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1747248251509</updated>
+    </task>
+    <task id="LOCAL-00083" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747248548415</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1747248548415</updated>
+    </task>
+    <task id="LOCAL-00084" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747249297080</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1747249297080</updated>
+    </task>
+    <task id="LOCAL-00085" summary="Попытка ...">
+      <option name="closed" value="true" />
+      <created>1747249732425</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1747249732425</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Написала модели" />
@@ -158,6 +523,23 @@
     <MESSAGE value="Готовы валидаторы" />
     <MESSAGE value="Документация и доработаны валидаторы" />
     <MESSAGE value="Добавлена рассылка в телеграмм" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена рассылка в телеграмм" />
+    <MESSAGE value="Покрытие тестами на 93%" />
+    <MESSAGE value="Поправила код с помощью линтеров" />
+    <MESSAGE value="Добавила Dockerfile и docker-compose.yml" />
+    <MESSAGE value="docker-compose.yml почти работает, осталось celeri-beat" />
+    <MESSAGE value="Добавила ci-cd.yml и пропустила код через flake8" />
+    <MESSAGE value="Проверяю, запускается ли ci-cd" />
+    <MESSAGE value="Поправила тесты немного" />
+    <MESSAGE value="Поправила ci-cd" />
+    <MESSAGE value="Исправила отсутствие max_length в моделях в полях CharField" />
+    <MESSAGE value="Пробный запуск" />
+    <MESSAGE value="Поправила отсутствие max_length в поле CharField" />
+    <MESSAGE value="Исправляю ошибку со старой миграцией" />
+    <MESSAGE value="Попытка исправить ошибку с пагинацией" />
+    <MESSAGE value="Попытка подредактировала тесты" />
+    <MESSAGE value="Попытка исправляю Login in Docker hub" />
+    <MESSAGE value="Попытка исправила в Copy file отсутствие кавычек" />
+    <MESSAGE value="Попытка ..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Попытка ..." />
   </component>
 </project>

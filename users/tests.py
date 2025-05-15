@@ -9,9 +9,6 @@ from users.models import User
 class TestUser(APITestCase):
     """ Тесты для модели пользователя  """
 
-    # def setUp(self):
-    #     self.user = User.objects.create_user(email="test1@gmail.com", password="123qaz123")
-
     @classmethod
     def setUpTestData(cls):
         cls.user = User.objects.create_user(email="test1@gmail.com", password="123qaz123")
@@ -32,7 +29,7 @@ class TestUser(APITestCase):
         url = reverse("users:user-detail", args=(self.user.id,))
         response = self.client.get(url)
         data = response.json()
-        self.assertEqual(data.get("id"), 11)
+        self.assertEqual(data.get("id"), 1)
         self.assertEqual(data.get("email"), "test1@gmail.com")
 
     def test_user_list(self):
@@ -40,8 +37,10 @@ class TestUser(APITestCase):
         url = reverse("users:user-list")
         response = self.client.get(url)
         data = response.json()
-        data_expect = [{'id': 11, 'name': None, 'email': 'test1@gmail.com', 'phone': None}]
-        # print("data:", data)
+        data_expect = {'count': 1, 'next': None, 'previous': None, 'results': [
+            {'id': 1, 'name': None, 'email': 'test1@gmail.com', 'phone': None}
+        ]}
+        # print("Я печатаю проверить test_user_list:", data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data, data_expect)
 

@@ -6,7 +6,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -18,21 +17,27 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='award',
             name='owner',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='Владелец'),
+            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE,
+                                    to=settings.AUTH_USER_MODEL,
+                                    verbose_name='Владелец'),
         ),
         migrations.AddField(
             model_name='habits',
             name='award',
-            field=models.ForeignKey(blank=True, help_text='Вознаграждение', null=True, on_delete=django.db.models.deletion.SET_NULL, to='habits.award'),
+            field=models.ForeignKey(blank=True, help_text='Вознаграждение', null=True,
+                                    on_delete=django.db.models.deletion.SET_NULL, to='habits.award'),
         ),
         migrations.AddField(
             model_name='habits',
             name='related_habit',
-            field=models.ForeignKey(blank=True, help_text='Связанная привычка', null=True, on_delete=django.db.models.deletion.SET_NULL, to='habits.habits'),
+            field=models.ForeignKey(blank=True, help_text='Связанная привычка', null=True,
+                                    on_delete=django.db.models.deletion.SET_NULL, to='habits.habits'),
         ),
         migrations.AddField(
             model_name='habits',
             name='user',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, related_name='owner_lesson', to=settings.AUTH_USER_MODEL, verbose_name='Пользователь'),
+            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE,
+                                    related_name='owner_lesson',
+                                    to=settings.AUTH_USER_MODEL, verbose_name='Пользователь'),
         ),
     ]

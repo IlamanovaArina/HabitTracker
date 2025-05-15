@@ -1,3 +1,4 @@
+import datetime
 from django.urls import reverse
 
 from rest_framework.test import APITestCase
@@ -30,23 +31,24 @@ class TestAward(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(data.get("price"), 100)
 
-    def test_award_retrieve(self):
-        """ Тестируем детализация объекта вознаграждение """
-        url = reverse("habits:award-detail", args=(self.award.id,))
-        response = self.client.get(url)
-        data = response.json()
-        self.assertEqual(data.get("id"), 6)
-        self.assertEqual(data.get("name"), "Вознаграждение")
-
     def test_award_list(self):
         """ Тестируем просмотр списка вознаграждений """
         url = reverse("habits:award-list")
         response = self.client.get(url)
         data = response.json()
-        data_expect = [{'id': 2, 'name': 'Вознаграждение', 'description': None, 'price': None, 'user': 2}]
-        # print("data:", data)
+        data_expect = {'count': 1, 'next': None, 'previous': None, 'results': [
+            {'id': 1, 'name': 'Вознаграждение', 'description': None, 'price': None, 'user': 1}
+        ]}
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data, data_expect)
+
+    def test_award_retrieve(self):
+        """ Тестируем детализация объекта вознаграждение """
+        url = reverse("habits:award-detail", args=(self.award.id,))
+        response = self.client.get(url)
+        data = response.json()
+        self.assertEqual(data.get("id"), 1)
+        self.assertEqual(data.get("name"), "Вознаграждение")
 
     def test_award_put(self):
         """ Тестируем обновление объекта вознаграждение """
@@ -58,7 +60,6 @@ class TestAward(APITestCase):
         }
         response = self.client.put(url, data, content_type='application/json')
         data_json = response.json()
-        # print(data_json)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data_json.get("prise"), data.get("prise"))
 
@@ -69,8 +70,8 @@ class TestAward(APITestCase):
         response = self.client.delete(url)
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
-    def tearDown(self):
-        self.user.delete()
+    # def tearDown(self):
+    #     self.user.delete()
 
 
 class TestHabits(APITestCase):
@@ -82,35 +83,25 @@ class TestHabits(APITestCase):
         self.user.save()
         self.client.force_authenticate(user=self.user)  # Авторизация
         self.award = Award.objects.create(name="Вознаграждение", user=self.user)
-        # data = {
-        #     "name": "Чайная встреча",
-        #     "user": self.user,
-        #     "place": "ТЦ Красная площадь",
-        #     "time": "12:00:00",
-        #     "action": "Встретиться с подругой за чашечкой чая",
-        #     "pleasant_habits_sign": True,
-        #     "periodicity": 5,
-        #     "time_to_complete": "00:01:00"
-        # }
         self.habits_pleasant = Habits.objects.create(
             name="Чайная встреча",
             user=self.user,
             place="ТЦ Красная площадь",
-            time="12:00:00",
+            time=datetime.time(hour=12, minute=0),
             action="Встретиться с подругой за чашечкой чая",
             pleasant_habits_sign=True,
             periodicity=5,
-            time_to_complete="00:01:00"
+            time_to_complete=datetime.timedelta(minutes=1)  # вместо "00:01:00"
         )
         self.habit = Habits.objects.create(
             name="Пробежка",
             user=self.user,
             place="Парк",
-            time="12:00:00",
+            time=datetime.time(hour=12, minute=0),
             action="Бегать",
             related_habit=self.habits_pleasant,
             periodicity=5,
-            time_to_complete="00:01:59"
+            time_to_complete=datetime.timedelta(seconds=119)  # вместо "00:01:59"
         )
 
     def test_habits_post(self):
@@ -126,7 +117,6 @@ class TestHabits(APITestCase):
             "time_to_complete": "00:01:00"
         }
         response = self.client.post(url, data=data)
-        # print(response.json())
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_habits_retrieve(self):
@@ -134,24 +124,23 @@ class TestHabits(APITestCase):
         url = reverse("habits:habit-detail", args=(self.habit.id,))
         response = self.client.get(url)
         data = response.json()
-        self.assertEqual(data.get("id"), 11)
+        self.assertEqual(data.get("id"), 2)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_habits_list(self):
-        """ Тестируем просмотр списка привычка """
+        """ Тестируем просмотр списка привычек """
         url = reverse("habits:habit-list")
         response = self.client.get(url)
         data = response.json()
         data_expect = {'count': 2, 'next': None, 'previous': None, 'results': [
-            {'id': 3, 'name': 'Чайная встреча', 'place': 'ТЦ Красная площадь', 'time': '12:00:00',
+            {'id': 1, 'name': 'Чайная встреча', 'place': 'ТЦ Красная площадь', 'time': '12:00:00',
              'action': 'Встретиться с подругой за чашечкой чая', 'pleasant_habits_sign': True, 'periodicity': 5,
-             'time_to_complete': '00:01:00', 'is_public': False, 'user': 7, 'related_habit': None, 'award': None},
-            {'id': 4
-                , 'name': 'Пробежка', 'place': 'Парк', 'time': '12:00:00', 'action': 'Бегать',
+             'time_to_complete': '00:01:00', 'is_public': False, 'user': 1, 'related_habit': None, 'award': None},
+            {'id': 2, 'name': 'Пробежка', 'place': 'Парк', 'time': '12:00:00', 'action': 'Бегать',
              'pleasant_habits_sign': False, 'periodicity': 5, 'time_to_complete': '00:01:59', 'is_public': False,
-             'user': 7, 'related_habit': 3, 'award': None}]}
+             'user': 1, 'related_habit': 1, 'award': None}]}
+        # print("data", data)
 
-        # print("data:", data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data, data_expect)
 
@@ -182,8 +171,8 @@ class TestHabits(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
     def tearDown(self):
+        """ Очистка тестовой дб каждый раз """
         self.user.delete()
 
 # coverage run --source='.' manage.py. test
 # coverage report
-

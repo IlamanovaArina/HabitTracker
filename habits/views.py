@@ -12,7 +12,7 @@ class HabitsViewSet(viewsets.ModelViewSet):
     """ Класс представления вида ViewSet для модели Привычки """
 
     serializer_class = HabitsSerializer
-    queryset = Habits.objects.all().order_by('id')
+    queryset = Habits.objects.all().order_by('id').distinct()
     pagination_class = HabitsPagination
     permission_classes = [IsOwner]
 
@@ -50,5 +50,5 @@ class AwardViewSet(viewsets.ModelViewSet):
     """ Класс представления вида ViewSet для модели Вознаграждение """
 
     serializer_class = AwardSerializer
-    queryset = Award.objects.all()
+    queryset = Award.objects.all().order_by('id').distinct()
     permission_classes = [IsOwner]

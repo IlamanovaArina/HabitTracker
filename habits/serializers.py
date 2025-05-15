@@ -5,7 +5,6 @@ from habits.models import Habits, Award
 
 class HabitsSerializer(serializers.ModelSerializer):
     """ Сериализатор для модели Привычки """
-    # user = serializers.IntegerField(read_only=True)
 
     def validate_related_habit_or_award(self, related_habit, award):
         """ Проверяем, заполнены ли оба поля """
@@ -51,8 +50,6 @@ class HabitsSerializer(serializers.ModelSerializer):
         if not (related_habit or award) and not pleasant_habits_sign:
             raise serializers.ValidationError(
                 "Должно быть указано хотя бы одно из полей: связанная привычка или вознаграждение")
-
-
 
         self.validate_related_habit_or_award(attrs.get('related_habit'), attrs.get('award'))
         self.validate_time_to_complete(attrs.get('time_to_complete'))

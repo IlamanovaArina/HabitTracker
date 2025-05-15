@@ -6,7 +6,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('habits', '0003_rename_sign_of_publicity_habits_is_public'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
@@ -21,6 +20,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='habits',
             name='user',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='owner_lesson', to=settings.AUTH_USER_MODEL, verbose_name='Пользователь'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='owner_lesson',
+                                    to=settings.AUTH_USER_MODEL, verbose_name='Пользователь'),
         ),
     ]

@@ -1,0 +1,70 @@
+services:
+  web:
+    image: ariena/habit-tracker:latest
+    hostname: web
+    command: sh -c "python manage.py collectstatic --no-input && python manage.py migrate && gunicorn config.wsgi:application --bind 0.0.0.0:8000"
+    volumes:
+      - static_volume:/media
+    environment:
+     - DEBUG=True
+     - HOST=db
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:17
+    env_file:
+      - .env
+    expose:
+      - "5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:latest
+    expose:
+      - "6379"
+
+  celeri-worker:
+    image: ariena/celeri-worker:latest
+    command: bash -c "celery -A config worker --loglevel=info"
+    depends_on:
+      - web
+    env_file:
+      - .env
+
+  celeri-beat:
+    image: ariena/celeri-beat:latest
+    command: bash -c "celery -A config beat --loglevel=info"
+    depends_on:
+      - web
+    env_file:
+      - .env
+
+  nginx:
+    image: ariena/habit-tracker-nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - static_volume:/app/staticfiles
+    depends_on:
+      - web
+
+networks:
+  default:
+
+volumes:
+#  Объявляем тома для сохранения данных между перезапусками
+  postgres_data:
+  static_volume:
