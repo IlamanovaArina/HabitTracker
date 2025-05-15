@@ -1,6 +1,6 @@
 services:
   web:
-    image: ariena/online-training:latest
+    image: ariena/habit-tracker:latest
     hostname: web
     command: sh -c "python manage.py collectstatic --no-input && python manage.py migrate && gunicorn config.wsgi:application --bind 0.0.0.0:8000"
     volumes:
@@ -53,7 +53,7 @@ services:
       - .env
 
   nginx:
-    image: ariena/online-training-nginx:latest
+    image: ariena/habit-tracker-nginx:latest
     ports:
       - "80:80"
     volumes:
