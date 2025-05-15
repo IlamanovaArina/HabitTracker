@@ -122,18 +122,19 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no -vT ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
             cd "${{ secrets.DEPLOY_DIR }}"
-            sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
-            curl ifconfig.me
+          
+            # Остановить и удалить текущие контейнеры
             sudo docker compose down
-            sudo docker container prune -f
+          
+            # Очистить неиспользуемые контейнеры и образы (опционально)
+            sudo docker system prune -f
+          
+            # Обновить образы из Docker Hub
+            sudo docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker:latest
+            sudo docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker-nginx:latest
+            sudo docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-worker:latest
+            sudo docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-beat:latest
+          
+            # Запустить контейнеры с обновленными образами
             sudo docker compose up -d --build
           EOF
-
-#      - name: Deploy to Server
-#        run: |
-#          ssh -o StrictHostKeyChecking=no -vT ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
-#            sudo docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/atomic-habits:${{ github.sha }}
-#            sudo docker stop atomic-habits || true
-#            sudo docker rm atomic-habits || true
-#            sudo docker run -d --name atomic-habits -p 80:8000 ${{ secrets.DOCKER_HUB_USERNAME }}/atomic-habits:${{ github.sha }}
-#          EOF
