@@ -71,6 +71,9 @@ jobs:
         run: |
           echo "${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}" | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
 
+      - name: Removing old containers
+        run: sudo docker compose up -d --build
+
       - name: Build Docker image
         run: |
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker:latest .
