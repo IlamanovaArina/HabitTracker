@@ -71,15 +71,13 @@ jobs:
         run: |
           echo "${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}" | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
 
-#      - name: Removing old containers
-#        run: sudo docker compose up -d --build
-
-      - name: Build Docker image
+      - name: Build Docker images
         run: |
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker:latest .
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker-nginx:latest nginx/.
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-worker:latest .
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-beat:latest .
+          docker build --no-cache -t ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker:latest .
+          docker build --no-cache -t ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker-nginx:latest nginx/.
+          docker build --no-cache -t ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-worker:latest .
+          docker build --no-cache -t ${{ secrets.DOCKER_HUB_USERNAME }}/celeri-beat:latest .
+
       - name: Push Docker image to Docker Hub
         run: |
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/habit-tracker:latest
